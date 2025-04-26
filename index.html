@@ -1,205 +1,224 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>アフリカ産ゴールドバー販売</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soverighn Capitals Vault - アフリカ産ゴールドバー販売</title>
   <style>
     body {
-      background-color: #111;
-      color: #e0c097;
-      font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
     header {
       background-color: #000;
       padding: 2rem;
       text-align: center;
+      border-bottom: 1px solid #555;
     }
     header h1 {
-      color: #e0c097;
-      font-size: 2.5rem;
+      color: #e0e0e0;
+      font-size: 2rem;
+      margin: 0;
     }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
+    .hero {
+      background-color: #222;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #d0d0d0;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.2rem;
+      color: #b0b0b0;
+    }
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #444;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 960px;
       margin: auto;
     }
-    h2 {
-      color: #f5d887;
+    .section h3 {
+      color: #d0d0d0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #444;
+      display: inline-block;
+      margin-bottom: 1rem;
     }
-    .gold-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
     }
-    .gold-images img {
-      width: 300px;
-      border: 2px solid #f5d887;
-      border-radius: 8px;
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #444;
     }
-    form {
-      background-color: #1a1a1a;
+    th {
+      color: #d0d0d0;
+    }
+    .cta {
+      background: #333;
+      color: #e0e0e0;
       padding: 2rem;
-      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2rem;
       margin-top: 2rem;
     }
-    input, textarea {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    input[type="submit"] {
-      background-color: #e0c097;
-      color: #000;
-      cursor: pointer;
+    .cta a {
+      color: #e0e0e0;
       font-weight: bold;
+      text-decoration: none;
+    }
+    .cta a:hover {
+      text-decoration: underline;
     }
     footer {
+      padding: 2rem;
       text-align: center;
-      padding: 1rem;
+      font-size: 0.9rem;
       background-color: #000;
-      color: #666;
+      color: #777;
     }
-    .chart-container {
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-    canvas {
-      background-color: #1a1a1a;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      background-color: #333;
+      padding: 2rem;
       border-radius: 8px;
     }
+    input, textarea {
+      width: 80%;
+      padding: 1rem;
+      margin: 1rem 0;
+      background-color: #444;
+      border: 1px solid #666;
+      color: #fff;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #444;
+      border: none;
+      padding: 1rem 2rem;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #666;
+    }
+    .gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .gallery img {
+      max-width: 45%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <header>
-    <h1>信頼と実績のアフリカ産ゴールドバー販売</h1>
+    <h1>Soverighn Capitals Vault - アフリカ産ゴールドバー販売</h1>
   </header>
 
-  <section>
-    <h2>商品紹介</h2>
-    <p>
-      最低購入量は5kgから。現地で純度の確認が可能。アフリカでの購入が最も割安ですが、ドバイ、香港での手配も可能です。
-      英語ガイド帯同または代理でのお手続きも対応可能。すべて前払いとなります。
-    </p>
+  <div class="hero">
+    <h2>“本物の資産は、静かに育まれる。”</h2>
+    <p>単なる差益狙いではありません。  
+    世界情勢の不安定化が進む今、ゴールドは資産防衛の最後の砦。  
+    所有登録不要、国に依存せず純資産として手元に残せる希少な存在──  
+    未来と次世代に確かな財産を残すために。</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gold_bullion_bars.jpg" alt="ゴールドバーの写真">
+  </div>
 
-    <h2>なぜ今ゴールドなのか</h2>
-    <p>
-      金の価格は近年高騰傾向にあり、資産保全の手段として富裕層を中心に注目を集めています。ただし、高額な購入となるため、富裕層でない方にはおすすめしておりません。
-    </p>
+  <section class="section">
+    <h3>購入プランとお支払い条件</h3>
+    <table>
+      <tr>
+        <th>プラン名</th>
+        <th>支払い方法</th>
+        <th>補足</th>
+      </tr>
+      <tr>
+        <td>自身で現地渡航プラン</td>
+        <td>仲介手数料のみ</td>
+        <td>渡航・滞在費別途。現地にて直接購入。</td>
+      </tr>
+      <tr>
+        <td>英語ガイド帯同プラン</td>
+        <td>全額前払い</td>
+        <td>5kg以上から。空港送迎〜輸出手配まで対応。</td>
+      </tr>
+      <tr>
+        <td>完全代理購入プラン</td>
+        <td>全額前払い</td>
+        <td>写真・動画による事前確認。税金50:50負担。</td>
+      </tr>
+    </table>
+    <p style="margin-top:1rem; font-size:0.95rem; color:#aaa;">※仕入れは通常、即日〜数週間以内を目指しておりますが、状況によっては最大で半年ほどお時間をいただく場合がございます。</p>
+  </section>
 
-    <h2>アフリカでの購入のメリット</h2>
+  <section class="section">
+    <h3>購入可能場所について</h3>
     <p>
-      アフリカには安価な金が流通していますが、その分詐欺業者も多数存在します。当社は信頼あるルートでの正規流通を行っております。写真・動画の手配も可能。
+      アフリカが相場として最も安く金を購入できる場所です。しかし、アフリカ以外にも、ドバイや香港などでも手配が可能です。  
+      世界各国で信頼性ある手続きとともに、ご希望の形でご案内いたします。
     </p>
+  </section>
 
-    <h2>手数料と税について</h2>
-    <p>
-      現地にご自身で渡航される場合は仲介手数料のみ。代理手配やガイド帯同の場合は全額前払いが必要です。輸出にかかる税金はお客様と業者で50:50負担。
-    </p>
-
-    <div class="gold-images">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gold_bullion_bars.jpg" alt="ゴールドバー1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Gold_Bars.jpg/640px-Gold_Bars.jpg" alt="ゴールドバー2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Gold_in_Burma_003.jpg" alt="アフリカのゴールド取引">
+  <section class="section">
+    <h3>金価格リアルタイムチャート（日本円建て）</h3>
+    <div style="height:480px; margin-top:1rem;">
+      <iframe src="https://s.tradingview.com/widgetembed/?symbol=TVC%3AGOLDJPY&interval=60&theme=dark&style=1&locale=ja&toolbarbg=1a1a1a&hide_top_toolbar=true&hide_side_toolbar=true&saveimage=1&studies=[]&withdateranges=1&hideideas=1&allow_symbol_change=false" 
+        style="width: 100%; height: 100%; border: none; border-radius:8px;"
+        allowfullscreen>
+      </iframe>
     </div>
+  </section>
 
-    <h2>リアルタイム金価格チャート</h2>
-    <div class="chart-container">
-      <canvas id="goldChart"></canvas>
-    </div>
+  <div class="cta">
+    今すぐコンシェルジュに相談 ▶<br>
+    ご相談後、ご希望に応じて販売先との<br>
+    <strong>ビデオ通話（Zoom/WhatsApp）</strong>も可能です。
+  </div>
 
-    <h2>お問い合わせ</h2>
-    <form action="mailto:james.s.h.gold@gmail.com" method="POST" enctype="text/plain">
-      <label for="name">お名前:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">メールアドレス:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">お問い合わせ内容:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <input type="submit" value="送信">
+  <section class="section">
+    <h3>お問い合わせ</h3>
+    <form action="mailto:james.s.h.gold@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="お名前" required>
+      <input type="email" name="email" placeholder="メールアドレス" required>
+      <textarea name="message" placeholder="ご質問・ご要望" rows="4" required></textarea>
+      <button type="submit">送信する</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 African Gold Ltd. All rights reserved.</p>
+    &copy; 2025 Soverighn Capitals Vault. All Rights Reserved.
   </footer>
-
-  <script>
-    // APIを使って金価格データを取得し、Chart.jsで描画する
-    const ctx = document.getElementById('goldChart').getContext('2d');
-    let goldPrices = []; // 金価格データ
-    let timeStamps = [];  // 時刻データ
-
-    // APIから金価格データを取得（例として、XigniteなどのAPIを利用）
-    async function fetchGoldPrice() {
-      const response = await fetch('https://api.metals-api.com/v1/latest?access_key=YOUR_ACCESS_KEY&symbols=XAU&base=USD');
-      const data = await response.json();
-      
-      // 最新の金価格を取得して配列に追加
-      const price = data.rates.XAU;
-      const timestamp = new Date().toLocaleTimeString();
-
-      goldPrices.push(price);
-      timeStamps.push(timestamp);
-
-      // データが一定量に達したら古いデータを削除
-      if (goldPrices.length > 20) {
-        goldPrices.shift();
-        timeStamps.shift();
-      }
-
-      // チャートを更新
-      goldChart.update();
-    }
-
-    // Chart.jsの設定
-    const goldChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: timeStamps,
-        datasets: [{
-          label: '金価格 (USD)',
-          data: goldPrices,
-          borderColor: '#f5d887',
-          fill: false,
-          borderWidth: 2,
-          tension: 0.1
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          x: {
-            type: 'category',
-            title: {
-              display: true,
-              text: '時間'
-            }
-          },
-          y: {
-            beginAtZero: false,
-            title: {
-              display: true,
-              text: '価格 (USD)'
-            }
-          }
-        }
-      }
-    });
-
-    // 定期的に金価格を更新
-    setInterval(fetchGoldPrice, 60000); // 60秒ごとにデータを取得
-  </script>
 </body>
 </html>
